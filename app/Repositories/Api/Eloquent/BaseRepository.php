@@ -2,14 +2,14 @@
 
 namespace App\Repositories\Api\Eloquent;
 
-use App\Repositories\Api\EloquentRepository;
+use App\Repositories\Api\EloquentRepositoryInterface;
 use Exception;
 use GuzzleHttp\Exception\BadResponseException;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\DB;
 
-class BaseRepository implements EloquentRepository
+class BaseRepository implements EloquentRepositoryInterface
 {
     protected $model;
     protected $query;

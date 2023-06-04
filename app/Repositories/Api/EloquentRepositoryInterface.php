@@ -2,7 +2,7 @@
 
 namespace App\Repositories\Api;
 
-interface EloquentRepository
+interface EloquentRepositoryInterface
 {
     /**
      * @param $data

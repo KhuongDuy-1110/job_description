@@ -198,6 +198,12 @@ return [
                     'in' => 'header', // The location of the API key. Valid values are "query" or "header".
                 ],
                 */
+                'sanctum' => [
+                    'type' => 'apiKey',
+                    'description' => 'Laravel Sanctum token authentication',
+                    'name' => 'Authorization',
+                    'in' => 'header'
+                ],
             ],
             'security' => [
                 /*
@@ -263,7 +269,7 @@ return [
                  * 'full' (expands the tags and operations),
                  * 'none' (expands nothing).
                  */
-                'doc_expansion' => env('L5_SWAGGER_UI_DOC_EXPANSION', 'none'),
+                'doc_expansion' => env('L5_SWAGGER_UI_DOC_EXPANSION', 'list'),
 
                 /**
                  * If set, enables filtering. The top bar will show an edit box that

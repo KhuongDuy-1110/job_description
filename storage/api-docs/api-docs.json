@@ -1,0 +1,59 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "JD API",
+        "version": "1"
+    },
+    "paths": {
+        "/api/login": {
+            "post": {
+                "tags": [
+                    "User Information"
+                ],
+                "description": "User login",
+                "operationId": "1f05ac4888e466f683af8aa047dcceac",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "email": {
+                                        "type": "string",
+                                        "example": "nva@gmail.com"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "example": "***"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "422": {
+                        "description": "Bad request"
+                    },
+                    "401": {
+                        "description": "Authorized"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "sanctum": {
+                "type": "apiKey",
+                "description": "Laravel Sanctum token authentication",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }
+    }
+}
